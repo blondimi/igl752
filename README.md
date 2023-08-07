@@ -1,6 +1,6 @@
-# IGL502/752 (A22)
+# IGL502/752
 
-_Fichiers complémentaires du cours IGL502/752 – Techniques de vérification et de validation de l'Université de Sherbrooke (automne 2022)._
+_Fichiers complémentaires du cours IGL502/752 – Techniques de vérification et de validation de l'Université de Sherbrooke._
 
 
 ## Outils
