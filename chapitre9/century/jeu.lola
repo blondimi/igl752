@@ -1,0 +1,143 @@
+PLACE curcuma, safran, cardamome, cannelle, budget, m1t, m1f, m2t, m2f, m3t, m3f, m4t, m4f, m5t, m5f, m6t, m6f, m7t, m7f, rt, r1, r2, r3, r4, r5, r6, r7, p1, p2, p3, score, max_tours;
+
+MARKING curcuma: 3, budget: 7, m1t: 1, m2t: 1, m3t: 1, m4t: 1, m5t: 1, m6t: 1, m7t: 1, rt: 1, p1: 1, p2: 1, p3: 1, max_tours: 24;
+
+TRANSITION carte_marchand1
+CONSUME rt: 1, m1t: 1, budget: 1, max_tours: 1;
+PRODUCE rt: 1, m1f: 1, cardamome: 1;
+
+TRANSITION carte_marchand2
+CONSUME rt: 1, m2t: 1, safran: 3, max_tours: 1;
+PRODUCE rt: 1, m2f: 1, cannelle: 1, cardamome: 1, curcuma: 1;
+
+TRANSITION carte_marchand3
+CONSUME rt: 1, m3t: 1, cannelle: 1, budget: 2, max_tours: 1;
+PRODUCE rt: 1, m3f: 1, cardamome: 1, safran: 1, curcuma: 1;
+
+TRANSITION carte_marchand4
+CONSUME rt: 1, m4t: 1, budget: 2, max_tours: 1;
+PRODUCE rt: 1, m4f: 1, curcuma: 2;
+
+TRANSITION carte_marchand5
+CONSUME rt: 1, m5t: 1, curcuma: 3, max_tours: 1;
+PRODUCE rt: 1, m5f: 1, cardamome: 1, safran: 1, budget: 1;
+
+TRANSITION carte_marchand6
+CONSUME rt: 1, m6t: 1, cardamome: 1, budget: 1, max_tours: 1;
+PRODUCE rt: 1, m6f: 1, safran: 2;
+
+TRANSITION carte_marchand7_J_R
+CONSUME rt: 1, m7t: 1, curcuma: 1, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, safran: 1;
+
+TRANSITION carte_marchand7_R_V
+CONSUME rt: 1, m7t: 1, safran: 1, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, cardamome: 1;
+
+TRANSITION carte_marchand7_V_B
+CONSUME rt: 1, m7t: 1, cardamome: 1, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, cannelle: 1;
+
+TRANSITION carte_marchand7_JJ_RR
+CONSUME rt: 1, m7t: 1, curcuma: 2, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, safran: 2;
+
+TRANSITION carte_marchand7_RR_VV
+CONSUME rt: 1, m7t: 1, safran: 2, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, cardamome: 2;
+
+TRANSITION carte_marchand7_VV_BB
+CONSUME rt: 1, m7t: 1, cardamome: 2, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, cannelle: 2;
+
+TRANSITION carte_marchand7_J_V
+CONSUME rt: 1, m7t: 1, curcuma: 1, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, cardamome: 1;
+
+TRANSITION carte_marchand7_R_B
+CONSUME rt: 1, m7t: 1, safran: 1, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, cannelle: 1;
+
+TRANSITION carte_marchand7_JR_RV
+CONSUME rt: 1, m7t: 1, curcuma: 1, safran: 1, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, safran: 1, cardamome: 1;
+
+TRANSITION carte_marchand7_JV_RB
+CONSUME rt: 1, m7t: 1, curcuma: 1, cardamome: 1, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, safran: 1, cannelle: 1;
+
+TRANSITION carte_marchand7_RV_VB
+CONSUME rt: 1, m7t: 1, safran: 1, cardamome: 1, max_tours: 1;
+PRODUCE rt: 1, m7f: 1, cardamome: 1, cannelle: 1;
+
+TRANSITION reprendre_cartes_init
+CONSUME rt: 1, max_tours: 1;
+PRODUCE r1: 1;
+
+TRANSITION reprendre_cartes1f
+CONSUME m1f: 1, r1: 1;
+PRODUCE m1t: 1, r2: 1;
+
+TRANSITION reprendre_cartes1t
+CONSUME m1t: 1, r1: 1;
+PRODUCE m1t: 1, r2: 1;
+
+TRANSITION reprendre_cartes2f
+CONSUME m2f: 1, r2: 1;
+PRODUCE m2t: 1, r3: 1;
+
+TRANSITION reprendre_cartes2t
+CONSUME m2t: 1, r2: 1;
+PRODUCE m2t: 1, r3: 1;
+
+TRANSITION reprendre_cartes3f
+CONSUME m3f: 1, r3: 1;
+PRODUCE m3t: 1, r4: 1;
+
+TRANSITION reprendre_cartes3t
+CONSUME m3t: 1, r3: 1;
+PRODUCE m3t: 1, r4: 1;
+
+TRANSITION reprendre_cartes4f
+CONSUME m4f: 1, r4: 1;
+PRODUCE m4t: 1, r5: 1;
+
+TRANSITION reprendre_cartes4t
+CONSUME m4t: 1, r4: 1;
+PRODUCE m4t: 1, r5: 1;
+
+TRANSITION reprendre_cartes5f
+CONSUME m5f: 1, r5: 1;
+PRODUCE m5t: 1, r6: 1;
+
+TRANSITION reprendre_cartes5t
+CONSUME m5t: 1, r5: 1;
+PRODUCE m5t: 1, r6: 1;
+
+TRANSITION reprendre_cartes6f
+CONSUME m6f: 1, r6: 1;
+PRODUCE m6t: 1, r7: 1;
+
+TRANSITION reprendre_cartes6t
+CONSUME m6t: 1, r6: 1;
+PRODUCE m6t: 1, r7: 1;
+
+TRANSITION reprendre_cartes7f
+CONSUME m7f: 1, r7: 1;
+PRODUCE m7t: 1, rt: 1;
+
+TRANSITION reprendre_cartes7t
+CONSUME m7t: 1, r7: 1;
+PRODUCE m7t: 1, rt: 1;
+
+TRANSITION carte_points1
+CONSUME p1: 1, curcuma: 2, cardamome: 2, cannelle: 2, max_tours: 1;
+PRODUCE score: 17, budget: 6;
+
+TRANSITION carte_points2
+CONSUME p2: 1, curcuma: 2, safran: 2, cardamome: 2, max_tours: 1;
+PRODUCE score: 13, budget: 6;
+
+TRANSITION carte_points3
+CONSUME p3: 1, curcuma: 1, safran: 3, cardamome: 1, cannelle: 1, max_tours: 1;
+PRODUCE score: 16, budget: 6;
