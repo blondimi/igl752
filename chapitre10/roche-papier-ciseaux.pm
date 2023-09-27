@@ -12,9 +12,9 @@ module systeme
 	c : [0..4] init 1; // Nombre d'agents de type ciseau
 
 	[] (n = 4) -> ((r * p) / m) : (r' = r - 1) & (p' = p + 1) +
-                ((r * c) / m) : (c' = c - 1) & (r' = r + 1) +
-                ((p * c) / m) : (p' = p - 1) & (c' = c + 1) +
-                ((mr + mp + mc) / m) : (r' = r) & (p' = p) & (c' = c);
+                      ((r * c) / m) : (c' = c - 1) & (r' = r + 1) +
+                      ((p * c) / m) : (p' = p - 1) & (c' = c + 1) +
+                      ((mr + mp + mc) / m) : (r' = r) & (p' = p) & (c' = c);
 endmodule
 
 // Propositions atomiques
